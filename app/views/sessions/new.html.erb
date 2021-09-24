@@ -1,0 +1,15 @@
+<h1>Sign in</h1>
+<%=form_with url: signin_path do |f|%>
+	<div class="mb-3">
+		<%= f.label :email %>
+		<%=f.text_field :email ,class:"form-control"%>
+	</div>
+	<div class="mb-3">
+		<%= f.label :password %>
+		<%=f.password_field :password ,class:"form-control"%>
+	</div>
+	<div><%=f.submit "SignIN"%></div>
+
+<%= link_to "SignUp", signup_path %>
+	
+<%end%>

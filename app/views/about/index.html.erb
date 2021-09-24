@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>
+<body style="background-color:powderblue;">
+<h1>Welcome to BookingTicket</h1>
+<%if current_user%>
+        Logged in as: <%= current_user.name %>
+        <%end%>
+        <%= button_to "logOut", logout_path, method: :delete %>
+        
+</body>
+</html>
+
