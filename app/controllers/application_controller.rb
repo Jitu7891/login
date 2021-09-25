@@ -14,4 +14,7 @@ class ApplicationController < ActionController::Base
 	    redirect_to login_path
 	  end
 	end
+	def require_user_logged_in!
+		redirect_to signin_path,alert:"You must be singned in  to do that" if @current_user.nill?
+	end
 end

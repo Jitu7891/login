@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'about',to:'about#index' 
+
+  get 'page', to: 'pages#new'
+  post 'page', to: 'pages#create'
+  
+  get 'password', to: 'passwords#edit' ,as: :edit_password
+  patch 'password', to: 'passwords#update'
  
-  get 'about',to:'about#index'
- 
+  
    get 'signup',to: 'registrations#new'
    post 'signup', to:   'registrations#create'
 

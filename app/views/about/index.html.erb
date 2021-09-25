@@ -4,9 +4,13 @@
 <body style="background-color:powderblue;">
 <h1>Welcome to BookingTicket</h1>
 <%if current_user%>
-        Logged in as: <%= current_user.name %>
+        Logged in as: <%= current_user.name.capitalize%>
         <%end%>
+        <%= link_to "changePassword",edit_password_path%>
         <%= button_to "logOut", logout_path, method: :delete %>
+        <%= link_to "ticketBooking", page_path %>
+
+        
         
 </body>
 </html>
